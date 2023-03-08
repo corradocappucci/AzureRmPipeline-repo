@@ -4,10 +4,12 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
-steps:
+- master
+
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
+
+steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
